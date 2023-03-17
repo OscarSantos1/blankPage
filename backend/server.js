@@ -28,6 +28,9 @@ app
     server.use(express.json());
     server.use(cors());
 
+    // Image static folder
+    server.use(express.static(path.join(__dirname, "public")));
+
     server.post("/api/idea", async (req, res) => {
       try {
         const response = await openai.createCompletion({
