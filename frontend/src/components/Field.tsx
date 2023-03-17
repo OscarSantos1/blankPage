@@ -13,7 +13,7 @@ const Field = (props: FieldProps) => {
       } `}
     >
       <h2 className="pl-4 mb-2">{props.label}</h2>
-      <div className="backdrop-blur-sm bg-white/40 h-1/2 rounded-full">
+      <div className="backdrop-blur-sm bg-white/60 h-1/2 rounded-full">
         <p>{props.content}</p>
       </div>
     </div>
