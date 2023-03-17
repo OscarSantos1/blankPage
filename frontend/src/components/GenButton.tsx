@@ -1,6 +1,7 @@
 import React from "react";
 
 interface ButtonProps {
+  loading: boolean;
   onClick(): void;
 }
 
@@ -9,9 +10,10 @@ const GenButton = (props: ButtonProps) => {
     <div className="flex flex-col justify-center items-center h-[15%] min-h-[30px]">
       <button
         onClick={props.onClick}
-        className="text-sm border border-slate-600 max-h-[50px] px-4 h-full backdrop-blur-sm rounded-full fade-in"
+        disabled={props.loading}
+        className="text-sm bg-[#EFA066] shadow-md max-h-[50px] px-6 h-full backdrop-blur-sm rounded-full fade-in"
       >
-        Generate a new idea
+        {props.loading ? "Loading..." : "Generate a new idea"}
       </button>
     </div>
   );

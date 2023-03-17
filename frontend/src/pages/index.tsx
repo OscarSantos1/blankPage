@@ -9,8 +9,10 @@ export default function Home() {
   const [location, setLocation] = useState("");
   const [subject, setSubject] = useState("");
   const [action, setAction] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const onClick = async () => {
+    setLoading(true);
     const response = await fetch("http://localhost:8000/api/idea", {
       method: "POST",
       headers: {
@@ -19,7 +21,12 @@ export default function Home() {
       body: JSON.stringify({ message: "Hi" }),
     });
     const data = await response.json();
-    setAction(data.message);
+    setLoading(false);
+    const [t, l, s, a] = data.message.split(", ");
+    setTime(t);
+    setLocation(l);
+    setSubject(s);
+    setAction(a);
   };
   return (
     <>
@@ -31,7 +38,7 @@ export default function Home() {
       <NavBar />
       <div className="flex flex-col justify-center items-center h-screen w-full px-7 backdrop-blur-sm bg-white/20 overflow-scroll">
         <div className="h-24" />
-        <div className="flex flex-col justify-center h-[50%] md:h-[30%] w-[90%] md:w-[70%] min-w-[340px] max-w-7xl fade-in">
+        <div className="flex flex-col justify-center h-[50%] md:h-[30%] w-[90%] md:w-[70%] min-w-[340px] mb-4 max-w-7xl fade-in">
           <div className="flex flex-col h-full min-h-[190px] max-h-[500px] w-full mb-20 md:mb-9 roll-in">
             <div className="flex flex-col md:flex-row h-[200%] md:h-[100%] md:gap-4">
               <Field label={"Time"} content={time} />
@@ -40,7 +47,7 @@ export default function Home() {
             <Field label={"Subject"} content={subject} />
             <Field label={"Action"} content={action} />
           </div>
-          <GenButton onClick={onClick} />
+          <GenButton onClick={onClick} loading={loading} />
         </div>
       </div>
     </>
