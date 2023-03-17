@@ -13,8 +13,7 @@ body {
 
 body {
   font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
-  /* background-color: #f9f5f1; */
-  background-image: url("../../public/images/confetti-exploding.png");
+  background-image: url("../public/images/confetti-exploding.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
