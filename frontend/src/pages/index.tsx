@@ -18,10 +18,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <NavBar />
-      <div className="flex flex-col justify-center items-center h-screen w-full px-7 backdrop-blur-md bg-white/20 overflow-scroll fade-in">
+      <div className="flex flex-col justify-center items-center h-screen w-full px-7 backdrop-blur-sm bg-white/20 overflow-scroll fade-in">
         <div className="h-24" />
-        <div className="flex flex-col justify-center h-[60%] w-full max-w-7xl">
-          <div className="flex flex-col justify-around h-full min-h-[250px] max-h-[500px] w-full mb-9 roll-in">
+        <div className="flex flex-col justify-center h-[30%] w-[90%] md:w-[70%] min-w-[340px] max-w-7xl">
+          <div className="flex flex-col justify-around h-full min-h-[250px] max-h-[500px] w-full mb-20 md:mb-9 roll-in">
             <div className="flex flex-col h-[200%] md:flex-row md:h-[100%] md:gap-4">
               <Field label={"Time"} content={time} />
               <Field label={"Location"} content={location} />

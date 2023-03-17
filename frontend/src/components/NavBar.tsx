@@ -1,14 +1,24 @@
 import React from "react";
-import Header from "./Header";
+import { IoIosHeart } from "react-icons/io";
 
 const NavBar = () => {
   return (
-    <div className="fixed z-10 top-0 left-0 right-0 flex flex-col md:flex-row justify-start items-center md:gap-4 p-5 pb-4 lg:pb-6 backdrop-blur-3xl fade-in">
-      <div className="text-lg md:text-4xl lg:text-4xl text-slate-600">
-        Blank Page:{" "}
+    <div className="fixed z-10 top-0 left-0 right-0 flex flex-row justify-between items-center lg:gap-4 p-2 lg:p-3 md:pb-3 lg:pb-3 bg-white/40 backdrop-blur-sm shadow-sm border-slate-300 fade-in">
+      <div className="flex flex-col md:flex-row justify-start md:items-center gap-1 md:gap-4 w-full">
+        <div className="text-base md:text-xl lg:text-2xl text-slate-600">
+          Blank Page:
+        </div>
+        <div className="text-[9px] md:text-sm lg:text-base md:pt-1 lg:pt-2 text-slate-600">
+          AI generated ideas to kickstart your imagination
+        </div>
       </div>
-      <div className="text-xs md:text-xl lg:text-xl md:pt-3 lg:pt-3 text-slate-600 ">
-        AI generated ideas to kickstart your imagination!
+      <div className="flex items-center gap-1 md:gap-2">
+        <div className="border px-[4px] pt-[5px] pb-[3px] border-[#bd3967] rounded-full cursor-pointer">
+          <IoIosHeart className="text-[#e4315a]" size="20" />
+        </div>
+        <div className="text-[9px] md:text-sm border border-slate-600 px-2 md:px-4 py-2 md:py-1 rounded-full">
+          ABOUT
+        </div>
       </div>
     </div>
   );

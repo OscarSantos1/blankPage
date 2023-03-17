@@ -12,8 +12,8 @@ const Field = (props: FieldProps) => {
         props.label == "Time" ? "w-[70%]" : "w-full"
       } `}
     >
-      <h2 className="pl-4 mb-2">{props.label}</h2>
-      <div className="backdrop-blur-sm bg-white/60 h-1/2 rounded-full">
+      <h2 className="text-xs md:text-sm pl-4 mb-2">{props.label}</h2>
+      <div className="backdrop-blur-sm bg-white/75 h-1/2 rounded-full shadow-md">
         <p>{props.content}</p>
       </div>
     </div>
