@@ -11,9 +11,14 @@ export default function Home() {
   const [action, setAction] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const domain =
+    process.env.NODE_ENV == "development"
+      ? "http://localhost:8000/"
+      : "https://blank-page.herokuapp.com/";
+
   const onClick = async () => {
     setLoading(true);
-    const response = await fetch("http://localhost:8000/api/idea", {
+    const response = await fetch(`${domain}api/idea`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
