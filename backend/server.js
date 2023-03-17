@@ -1,6 +1,7 @@
 const express = require("express");
 const next = require("next");
 const path = require("path");
+const cors = require("cors");
 require("dotenv").config();
 
 const dev = process.env.NODE_ENV !== "production";
@@ -12,7 +13,13 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    server.use(express.json());
+    server.use(cors());
 
+    server.post("/api/idea", (req, res) => {
+      console.log(req.body);
+      res.json({ message: "Hello World!" });
+    });
     server.get("*", (req, res) => {
       return handle(req, res);
     });
