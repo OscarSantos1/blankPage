@@ -41,7 +41,7 @@ export default function Home() {
       </Head>
       <div className="flex flex-col justify-center items-center h-screen w-full px-7 backdrop-blur-sm bg-white/20 overflow-scroll">
         <div className="h-24" />
-        <div className="flex flex-col justify-center h-[50%] md:h-[30%] w-[90%] md:w-[70%] min-w-[340px] mb-4 max-w-7xl fade-in">
+        <div className="flex flex-col justify-center h-[50%] md:h-[30%] w-[90%] md:w-[70%] min-w-[340px] max-w-7xl fade-in">
           <div className="flex flex-col h-full min-h-[190px] max-h-[500px] w-full mb-20 md:mb-9 roll-in">
             <div className="flex flex-col md:flex-row h-[200%] md:h-[100%] md:gap-4">
               <Field label={"Time"} content={time} />

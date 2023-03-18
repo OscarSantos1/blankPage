@@ -10,10 +10,12 @@ const about = () => {
         </h1>
       </Link>
       <p className="text-[9px] w-[90%] md:text-base text-center max-w-[900px]">
-        Blank Page is an AI powered tool that helps you get out of a creative
-        block. If you are an artist and wanna get creative as soon as posible,
-        try generating a brand new original idea with just the press of a
-        button.
+        Blank Page uses the same AI models form{" "}
+        <span className="font-bold">Open AI</span> used to power
+        <span className="font-bold"> Chat GPT</span> to help you get out of a
+        creative block. If you are an artist and want to get creating as soon as
+        posible, try generating a brand new original idea with just the press of
+        a button.
       </p>
     </div>
   );

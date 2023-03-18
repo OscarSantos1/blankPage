@@ -16,9 +16,9 @@ const NavBar = () => {
         </div>
       </div>
       <div className="flex items-center gap-1 md:gap-2">
-        <div className="border px-[4px] pt-[5px] pb-[3px] border-[#bd3967] rounded-full cursor-pointer">
+        {/* <div className="border px-[4px] pt-[5px] pb-[3px] border-[#bd3967] rounded-full cursor-pointer">
           <IoIosHeart className="text-[#e4315a]" size="20" />
-        </div>
+        </div> */}
         <Link href="/about">
           <button className="text-[9px] md:text-sm border border-slate-600 px-2 md:px-4 py-2 md:py-1 rounded-full">
             ABOUT

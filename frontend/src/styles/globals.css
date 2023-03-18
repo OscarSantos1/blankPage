@@ -32,7 +32,7 @@ body {
 }
 
 .roll-in {
-  animation: roll-in 2s ease 1;
+  animation: roll-in 1400ms ease 1;
 }
 @keyframes roll-in {
   0% {
@@ -50,7 +50,7 @@ body {
 }
 
 .fade-in {
-  animation: fade-in 2s ease 1;
+  animation: fade-in 1200ms ease 1;
 }
 @keyframes fade-in {
   0% {
